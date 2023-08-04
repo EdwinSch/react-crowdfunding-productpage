@@ -1,6 +1,8 @@
 @import "config";
 @import "../components/Header";
 @import "../components/Nav";
+@import "../components/Info";
+@import "../components/BtnToggleModal";
 
 // Init
 *,
@@ -44,4 +46,10 @@ main {
   border: solid green 1px;
   max-width: 730px;
   height: 300px;
+}
+
+.uti-spacebtwn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
