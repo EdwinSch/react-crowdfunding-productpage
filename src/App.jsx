@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Info from "./components/Info";
+import Stats from "./components/Stats";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Header />
       <div className="center-content">
         <Info />
+        <Stats />
       </div>
     </main>
   );
