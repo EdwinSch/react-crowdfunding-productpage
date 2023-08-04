@@ -11,6 +11,7 @@
   transition: 250ms ease;
 
   &:hover {
+    transform: scale(1.04);
     background: $accent;
   }
 }

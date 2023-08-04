@@ -4,6 +4,7 @@
 @import "../components/Info";
 @import "../components/BtnToggleModal";
 @import "../components/Stats";
+@import "../components/Options";
 
 // Init
 *,
@@ -44,7 +45,7 @@ main {
 .center-content {
   margin: 0 auto;
   margin-top: -90px;
-  border: solid green 1px;
+  // border: solid green 1px;
   max-width: 730px;
   height: auto;
 }
@@ -54,3 +55,8 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+
+// .uti-flexrow {
+//   display: flex;
+//   border: solid green 1px;
+// }
