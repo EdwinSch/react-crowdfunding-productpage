@@ -83,3 +83,38 @@
     }
   }
 }
+
+//-- Query
+@media only screen and (max-width: 550px) {
+  .info-container {
+    padding: 58px 24px 40px 24px;
+
+    h1 {
+      font-size: 1.25rem;
+    }
+    .bookmark-btn {
+      padding-right: 0;
+      width: 56px;
+      height: 56px;
+      border-radius: 99%;
+      display: block;
+      gap: 0;
+      overflow: hidden;
+    }
+    p {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .info-container {
+    .uti-spacebtwn {
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+}

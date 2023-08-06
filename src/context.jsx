@@ -3,14 +3,14 @@ import { createContext, useContext, useState } from "react";
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const [data, setData] = useState(null);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   //   const openSidebar = () => {
   //     setIsSidebarOpen(true);
   //   };
 
   return (
-    <AppContext.Provider value={{ data, setData }}>
+    <AppContext.Provider value={{ isMobileNavOpen, setIsMobileNavOpen }}>
       {children}
     </AppContext.Provider>
   );

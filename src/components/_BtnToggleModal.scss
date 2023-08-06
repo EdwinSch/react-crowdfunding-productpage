@@ -15,3 +15,10 @@
     background: $accent;
   }
 }
+
+//-- Query
+@media only screen and (max-width: 350px) {
+  .toggle-modal-btn {
+    padding: 18px 18px;
+  }
+}
