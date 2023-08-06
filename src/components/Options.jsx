@@ -4,6 +4,7 @@ import BtnToggleModal from "./BtnToggleModal";
 const Options = () => {
   let stockCountClass = "";
   let btnText = "";
+  let btnDisable = null;
 
   return (
     <section className="options-container">
@@ -27,9 +28,11 @@ const Options = () => {
           if (stock === 0) {
             stockCountClass = "option-wrapper out-of-stock";
             btnText = "Out of stock";
+            btnDisable = true;
           } else {
             stockCountClass = "option-wrapper";
             btnText = "Select reward";
+            btnDisable = false;
           }
 
           return (
@@ -43,7 +46,7 @@ const Options = () => {
                 <p className="stock-left">
                   {stock} <span>left</span>
                 </p>
-                <BtnToggleModal text={btnText} />
+                <BtnToggleModal text={btnText} btnDisable={btnDisable} />
               </div>
             </article>
           );

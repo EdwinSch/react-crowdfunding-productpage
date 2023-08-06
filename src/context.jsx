@@ -4,13 +4,26 @@ const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  //   const openSidebar = () => {
-  //     setIsSidebarOpen(true);
-  //   };
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
-    <AppContext.Provider value={{ isMobileNavOpen, setIsMobileNavOpen }}>
+    <AppContext.Provider
+      value={{
+        isMobileNavOpen,
+        setIsMobileNavOpen,
+        isModalOpen,
+        setIsModalOpen,
+        openModal,
+        closeModal,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );
