@@ -8,9 +8,11 @@ function App() {
     <main>
       <Header />
       <div className="center-content">
-        <Info />
-        <Stats />
-        <Options />
+        <div className="content">
+          <Info />
+          <Stats />
+          <Options />
+        </div>
       </div>
     </main>
   );

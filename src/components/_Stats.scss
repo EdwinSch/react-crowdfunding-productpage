@@ -52,7 +52,11 @@
 }
 
 //-- Query
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 730px) {
+  .stats-container {
+    padding: 30px 25px;
+  }
+
   .stats-row {
     flex-direction: column;
     align-items: center;

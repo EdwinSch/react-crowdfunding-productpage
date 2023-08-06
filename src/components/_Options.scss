@@ -63,3 +63,34 @@
 .out-of-stock {
   opacity: 0.4;
 }
+
+//-- Query
+@media only screen and (max-width: 500px) {
+  .options-container {
+    padding: 40px 24px;
+
+    .about-description {
+      margin: 25px 0;
+    }
+  }
+
+  .options-list-wrapper {
+    .option-wrapper {
+      margin-bottom: 24px;
+      padding: 24px 24px;
+
+      .uti-spacebtwn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    h4 {
+      margin-bottom: 8px;
+    }
+    .stock-left {
+      margin-bottom: 24px;
+    }
+  }
+}
