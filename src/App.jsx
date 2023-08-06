@@ -9,7 +9,6 @@ import { useGlobalContext } from "./context";
 function App() {
   const { isMobileNavOpen } = useGlobalContext();
 
-  console.log(isMobileNavOpen);
   return (
     <main>
       {isMobileNavOpen && <MobileNav />}

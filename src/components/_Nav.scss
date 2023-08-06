@@ -26,7 +26,10 @@ nav {
       transition: 250ms ease;
 
       &:hover {
-        color: $text;
+        color: $primary;
+      }
+      &:active {
+        color: $primary;
       }
     }
   }

@@ -1,5 +1,5 @@
 .mobile-nav-overlay {
-  border: solid green 2px;
+  //   border: solid green 2px;
   position: fixed;
   top: 0;
   left: 0;
@@ -21,6 +21,18 @@
     height: fit-content;
     margin: 0 20px;
     margin-top: 88px;
+    animation-name: dropdown;
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
+
+    @keyframes dropdown {
+      from {
+        margin-top: 0px;
+      }
+      to {
+        margin-top: 88px;
+      }
+    }
 
     li {
       padding: 24px;
@@ -40,5 +52,12 @@
     li:nth-child(2) {
       border-bottom: 1px solid #ebebeb;
     }
+  }
+}
+
+//-- Query
+@media only screen and (min-width: 550px) {
+  .mobile-nav-overlay {
+    display: none;
   }
 }
