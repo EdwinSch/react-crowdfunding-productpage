@@ -1,23 +1,50 @@
-.forms-container {
+form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   gap: 24px;
+  width: 100%;
 
-  form {
-    display: flex;
+  .option-wrapper {
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.15);
+    width: 100%;
     padding: 32px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
 
-    .row {
-      display: flex;
-      align-items: center;
-    }
+    .info {
+      width: 100%;
 
-    .test {
-      border: $inspect;
+      .info-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        border: $inspect;
+
+        h5 {
+          color: #000;
+          font-family: Commissioner;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          border: $inspect;
+        }
+        .pledge {
+          margin-top: 0;
+          color: #3cb3ab;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: normal;
+        }
+        .stock {
+          margin-top: 0;
+          border: $inspect;
+        }
+      }
     }
   }
 }

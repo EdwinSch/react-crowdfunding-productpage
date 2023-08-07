@@ -2,24 +2,23 @@ import { options } from "../data";
 
 const Forms = () => {
   return (
-    <section className="forms-container">
+    <form action="">
       {options.map((option) => {
         const { id, title, pledgeMin, description, stock } = option;
-
         return (
-          <form key={id}>
-            <input type="radio" name="radio" id="" />
-            <article>
-              <div className="row">
-                <h4>{title}</h4>
-                <p className="test">Pledge ${pledgeMin} or more</p>
+          <article key={id} className="option-wrapper">
+            <input type="radio" name="pledge-select" id="select" />
+            <div className="info">
+              <div className="info-header">
+                <label htmlFor="select">{title}</label>
+                <p className="pledge">Pledge ${pledgeMin} or more</p>
+                <p className="stock">{stock} left</p>
               </div>
-              <p>{description}</p>
-            </article>
-          </form>
+            </div>
+          </article>
         );
       })}
-    </section>
+    </form>
   );
 };
 

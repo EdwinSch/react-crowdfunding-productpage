@@ -21,7 +21,7 @@ const Options = () => {
         to be stored under the stand.
       </p>
       <div className="options-list-wrapper">
-        {options.map((option) => {
+        {options.slice(1).map((option) => {
           const { id, title, pledgeMin, description, stock } = option;
 
           // Check for empty stock
