@@ -7,3 +7,10 @@ header {
   height: 400px;
   padding: 0 25px;
 }
+
+//-- Query
+@media only screen and (max-width: 550px) {
+  header {
+    background-image: url(../assets/image-hero-mobile.jpg);
+  }
+}

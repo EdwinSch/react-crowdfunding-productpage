@@ -2,10 +2,17 @@ import { useState } from "react";
 
 const Form = ({ id, title, pledgeMin, description, stock }) => {
   const [active, isActive] = useState(false);
+  const [input, setInput] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setInput(input);
+    console.log(input);
+  };
 
   return (
     <form
-      action=""
+      onSubmit={handleSubmit}
       onClick={() => isActive(true)}
       className={active ? "form-active" : null}
     >
@@ -20,12 +27,24 @@ const Form = ({ id, title, pledgeMin, description, stock }) => {
         </p>
       </div>
       <p className="description">{description}</p>
+
       {/* Toggle form */}
       {active && (
         <div className="pledge-form">
-          <label htmlFor={id}>enter your pledge</label>
+          <label htmlFor={id}>Enter your pledge</label>
           <div>
-            <input type="number" name="amount" id={id} />
+            <input
+              type="number"
+              name="amount"
+              value={input}
+              id={id}
+              placeholder="$"
+              min={pledgeMin}
+              onChange={(e) => setInput(e.target.value)}
+            />
+            <button type="submit" className="continue-btn">
+              Continue
+            </button>
           </div>
         </div>
       )}

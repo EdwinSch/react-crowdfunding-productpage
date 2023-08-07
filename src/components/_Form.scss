@@ -70,9 +70,78 @@ form {
     border-top: solid lightgray 1px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    label {
+      color: $text;
+      font-size: 0.938rem;
+      font-weight: 400;
+    }
+    input[type="number"] {
+      margin-right: 16px;
+      width: 100px;
+      height: 48px;
+      border-radius: 33.5px;
+      border: 1px solid $primary;
+      color: $headings;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .continue-btn {
+      width: 107px;
+      height: 48px;
+      border-radius: 33.5px;
+      background: $accent;
+      border: none;
+      color: white;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
   }
 }
 
 .form-active {
   border: solid $primary 1px;
+}
+
+//-- Query
+@media only screen and (max-width: 550px) {
+  form {
+    .form-header {
+      display: flex;
+      flex-direction: column;
+
+      .row {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .stock {
+        margin-top: 12px;
+      }
+    }
+
+    .pledge-form {
+      padding-top: 0px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      label {
+        margin-top: 23px;
+        margin-bottom: 18px;
+      }
+
+      @media only screen and (max-width: 362px) {
+        input[type="number"] {
+          margin-right: 0px;
+          margin-bottom: 18px;
+        }
+      }
+    }
+  }
 }
