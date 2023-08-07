@@ -51,6 +51,11 @@
       font-weight: 400;
       line-height: 30px;
     }
+    .forms-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
   }
 }
 

@@ -1,7 +1,8 @@
 import { VscChromeClose } from "react-icons/vsc";
-import Forms from "./Forms";
-
 import { useGlobalContext } from "../context";
+
+import { options } from "../data";
+import Form from "./Form";
 
 const FormModal = () => {
   const { closeModal, isModalOpen } = useGlobalContext();
@@ -30,7 +31,12 @@ const FormModal = () => {
           Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
           the world?
         </p>
-        <Forms />
+        {/* FORMS */}
+        <section className="forms-wrapper">
+          {options.map((form) => {
+            return <Form key={form.id} {...form} />;
+          })}
+        </section>
       </div>
     </section>
   );
