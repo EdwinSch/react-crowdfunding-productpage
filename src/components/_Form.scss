@@ -88,6 +88,13 @@ form {
       font-size: 0.875rem;
       font-weight: 700;
       text-align: center;
+      appearance: none;
+      -moz-appearance: textfield;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
     }
     .continue-btn {
       width: 107px;
@@ -99,12 +106,25 @@ form {
       font-family: inherit;
       font-size: 0.875rem;
       font-weight: 700;
+      cursor: pointer;
+      transition: 250ms ease;
+    }
+    .continue-btn:hover {
+      background: $primary;
+    }
+
+    .error {
+      background: red;
     }
   }
 }
 
 .form-active {
   border: solid $primary 1px;
+}
+
+.out-of-stock {
+  opacity: 0.4;
 }
 
 //-- Query

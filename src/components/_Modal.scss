@@ -1,5 +1,5 @@
 .modal-overlay-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -10,6 +10,7 @@
   z-index: -1;
   visibility: hidden;
   opacity: 0;
+  // border: solid red 1px;
 
   .modal-wrapper {
     background: white;

@@ -33,7 +33,7 @@ const FormModal = () => {
         </p>
         {/* FORMS */}
         <section className="forms-wrapper">
-          {options.map((form) => {
+          {options.slice(0, 3).map((form) => {
             return <Form key={form.id} {...form} />;
           })}
         </section>
