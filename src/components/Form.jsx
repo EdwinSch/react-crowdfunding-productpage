@@ -2,21 +2,23 @@ import { useState } from "react";
 import { useGlobalContext } from "../context";
 
 const Form = ({ id, title, pledgeMin, description, stock }) => {
-  const { closeModal } = useGlobalContext();
+  const { closeModal, setIsThanksOpen } = useGlobalContext();
   // states
   const [active, setIsActive] = useState(false);
   const [input, setInput] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    // Validate for empty input
     if (input === "") {
       return;
     }
+    // Set input
     setInput(input);
     console.log(input);
-
+    // CLOSE modal && OPEN thanks message
     closeModal();
+    setIsThanksOpen(true);
   };
 
   return (

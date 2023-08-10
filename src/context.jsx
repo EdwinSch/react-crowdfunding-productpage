@@ -5,6 +5,7 @@ const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isThanksOpen, setIsThanksOpen] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -23,6 +24,8 @@ export const AppProvider = ({ children }) => {
         setIsModalOpen,
         openModal,
         closeModal,
+        isThanksOpen,
+        setIsThanksOpen,
       }}
     >
       {children}
