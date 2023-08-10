@@ -22,12 +22,14 @@ const Form = ({
     if (input === "") {
       return;
     }
-    // Set input
+    // Set input to 'server'
     setInput(input);
     console.log(input);
     // CLOSE modal && OPEN thanks message
     closeModal();
     setIsThanksOpen(true);
+    // Reset input state
+    setInput("");
   };
 
   const isActive = id === activeId;
