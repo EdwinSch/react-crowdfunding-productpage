@@ -16,6 +16,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
@@ -31,6 +32,7 @@ ul {
 }
 
 // Styles
+
 body {
   font-family: $font;
   min-height: 100vh;

@@ -4,7 +4,7 @@ import { useGlobalContext } from "../context";
 const Form = ({ id, title, pledgeMin, description, stock }) => {
   const { closeModal } = useGlobalContext();
   // states
-  const [active, isActive] = useState(false);
+  const [active, setIsActive] = useState(false);
   const [input, setInput] = useState("");
 
   const handleSubmit = (e) => {
@@ -22,7 +22,7 @@ const Form = ({ id, title, pledgeMin, description, stock }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      onClick={() => isActive(true)}
+      onClick={() => setIsActive(true)}
       className={active ? "form-active" : null}
     >
       <div className="form-header">
