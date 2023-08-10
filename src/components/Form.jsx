@@ -1,10 +1,19 @@
 import { useState } from "react";
 import { useGlobalContext } from "../context";
 
-const Form = ({ id, title, pledgeMin, description, stock }) => {
+const Form = ({
+  id,
+  title,
+  pledgeMin,
+  description,
+  stock,
+  activeId,
+  toggleAccordion,
+}) => {
   const { closeModal, setIsThanksOpen } = useGlobalContext();
   // states
-  const [active, setIsActive] = useState(false);
+
+  // const [active, setIsActive] = useState(false);
   const [input, setInput] = useState("");
 
   const handleSubmit = (e) => {
@@ -21,11 +30,14 @@ const Form = ({ id, title, pledgeMin, description, stock }) => {
     setIsThanksOpen(true);
   };
 
+  const isActive = id === activeId;
+
   return (
     <form
       onSubmit={handleSubmit}
-      onClick={() => setIsActive(true)}
-      className={active ? "form-active" : null}
+      onClick={() => toggleAccordion(id)}
+      // onClick={() => setIsActive(true)}
+      className={isActive ? "form-active" : null}
     >
       <div className="form-header">
         <div className="row">
@@ -40,7 +52,7 @@ const Form = ({ id, title, pledgeMin, description, stock }) => {
       <p className="description">{description}</p>
 
       {/* Toggle form */}
-      {active && (
+      {isActive && (
         <div className="pledge-form">
           <label htmlFor={id}>Enter your pledge</label>
           <div>

@@ -78,6 +78,7 @@ form {
       font-weight: 400;
     }
     input[type="number"] {
+      padding: 0 24px;
       margin-right: 16px;
       width: 100px;
       height: 48px;
@@ -90,6 +91,11 @@ form {
       text-align: center;
       appearance: none;
       -moz-appearance: textfield;
+    }
+    input[type="number"]::placeholder {
+      text-align: left;
+      margin-left: 24px;
+      color: #bfbfbf;
     }
 
     input::-webkit-outer-spin-button,

@@ -1,11 +1,18 @@
 import { VscChromeClose } from "react-icons/vsc";
 import { useGlobalContext } from "../context";
+import { useState } from "react";
 
 import { options } from "../data";
 import Form from "./Form";
 
 const FormModal = () => {
   const { closeModal, isModalOpen } = useGlobalContext();
+
+  const [activeId, setActiveId] = useState(null);
+
+  const toggleAccordion = (id) => {
+    setActiveId(id);
+  };
 
   return (
     <section
@@ -34,7 +41,14 @@ const FormModal = () => {
         {/* FORMS */}
         <section className="forms-wrapper">
           {options.slice(0, 3).map((form) => {
-            return <Form key={form.id} {...form} />;
+            return (
+              <Form
+                key={form.id}
+                {...form}
+                activeId={activeId}
+                toggleAccordion={toggleAccordion}
+              />
+            );
           })}
         </section>
       </div>
