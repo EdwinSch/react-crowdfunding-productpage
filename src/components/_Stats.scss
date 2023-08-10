@@ -45,9 +45,21 @@
 
   .progress {
     height: 100%;
-    width: 75%;
+    width: 89%;
     background: $primary;
     border-radius: 33.5px;
+    animation-name: fill;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    @keyframes fill {
+      from {
+        width: 0%;
+      }
+      to {
+        width: 89%;
+      }
+    }
   }
 }
 
