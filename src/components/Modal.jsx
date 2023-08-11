@@ -8,11 +8,17 @@ import Form from "./Form";
 const FormModal = () => {
   const { closeModal, isModalOpen } = useGlobalContext();
 
+  // Accordion auto-close logic
   const [activeId, setActiveId] = useState(null);
 
   const toggleAccordion = (id) => {
     setActiveId(id);
   };
+
+  // Filter out not in stock items from data, before mapping to UI
+  const inStock = options.filter((stock) => {
+    return stock.stock !== 0;
+  });
 
   return (
     <section
@@ -40,7 +46,7 @@ const FormModal = () => {
         </p>
         {/* FORMS */}
         <section className="forms-wrapper">
-          {options.slice(0, 3).map((form) => {
+          {inStock.map((form) => {
             return (
               <Form
                 key={form.id}
